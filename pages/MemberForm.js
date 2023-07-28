@@ -86,7 +86,7 @@ function MemberForm({ obj }) {
 
       {/* A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
       <Form.Check
-        className="text-white mb-3"
+        className="text-white mb-3 custom-switch"
         type="switch"
         id="captain"
         name="captain"
@@ -101,7 +101,7 @@ function MemberForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'UPDATE' : 'ADD'} MEMBER</Button>
+      <Button type="submit" variant="danger">{obj.firebaseKey ? 'UPDATE' : 'ADD'} MEMBER</Button>
     </Form>
   );
 }
