@@ -10,7 +10,7 @@ import { createMember, updateMember } from '../api/MemberData';
 const initialState = {
   name: '',
   image: '',
-  position: '',
+  role: '',
 };
 
 function MemberForm({ obj }) {
@@ -46,7 +46,7 @@ function MemberForm({ obj }) {
   };
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Teammate</h2>
+      <h2 className="text-white mt-5">{obj.firebaseKey ? 'UPDATE' : 'ADD'} MEMBER</h2>
 
       {/* TITLE INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="First and Last Name" className="mb-3">
@@ -101,7 +101,7 @@ function MemberForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Teammate</Button>
+      <Button type="submit">{obj.firebaseKey ? 'UPDATE' : 'ADD'} MEMBER</Button>
     </Form>
   );
 }

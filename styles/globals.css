@@ -18,5 +18,25 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: black;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.teamtxt {
+  text-align: center;
+  color: white;
+}
+
+.teambtns {
+  margin-right: 20px;
+  
+}
+.search {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
 }

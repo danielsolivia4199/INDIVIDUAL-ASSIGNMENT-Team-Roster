@@ -19,10 +19,6 @@ function MemberCard({ memberObj, onUpdate }) {
         <Card.Title>{memberObj.name}</Card.Title>
         <h5>{memberObj.captain ? <span className="badge text-bg-danger">Captain</span> : ''}</h5>
         <p className="card-text bold">{memberObj.role}</p>
-        {/* DYNAMIC LINK TO VIEW THE DETAILS  */}
-        <Link href={`/team/${memberObj.firebaseKey}`} passHref>
-          <Button variant="danger" className="m-2">VIEW</Button>
-        </Link>
         {/* DYNAMIC LINK TO EDIT THE DETAILS  */}
         <Link href={`/team/edit/${memberObj.firebaseKey}`} passHref>
           <Button variant="dark">EDIT</Button>

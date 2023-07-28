@@ -70,10 +70,26 @@ const deleteMember = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getGuards = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/member.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const CBG = Object.values(data).filter((member) => member.role === 'Guard');
+      resolve(CBG);
+    })
+    .catch(reject);
+});
+
 export {
   getMember,
   createMember,
   updateMember,
   getSingleMember,
   deleteMember,
+  getGuards,
 };
