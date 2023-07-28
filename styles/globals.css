@@ -37,6 +37,14 @@ body {
 }
 .search {
   margin-top: 20px;
-  margin-bottom: 20px;
-  
+  margin-bottom: 20px; 
+}
+
+.custom-switch .form-check-input:checked {
+  background-color: red; /* Set the desired red color for the checked switch */
+  border: black;
+}
+.custom-switch .form-check-input {
+  background-color: white; /* Set the desired red color for the unchecked switch */
+  border: black;
 }
